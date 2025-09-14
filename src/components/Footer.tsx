@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
@@ -55,7 +55,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 mr-2" />
-                <span>info@dancomconstruction.com</span>
+                <span>info@abukeansinvestment.com</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 mt-1" />
