@@ -4,53 +4,77 @@ import { ExternalLink, Calendar, MapPin } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "Modern Family Home",
+      title: "3 Bedroom Maisonette",
       category: "Residential",
-      location: "Suburbia Heights",
-      date: "2024",
-      image: "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description: "Complete custom home construction featuring modern design elements and sustainable materials."
+      location: "Utange Mombasa Kenya",
+      date: "",
+      image: "/images/utange3b-0.jpeg",
+      description: ""
     },
-    {
-      title: "Downtown Office Complex",
-      category: "Commercial",
-      location: "City Center",
-      date: "2023",
-      image: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description: "5-story office building with modern amenities and LEED certification requirements."
-    },
-    {
-      title: "Historic Renovation",
-      category: "Renovation",
-      location: "Old Town District",
-      date: "2023",
-      image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description: "Careful restoration of a 1920s historic building while maintaining original character."
-    },
-    {
-      title: "Luxury Kitchen Remodel",
+      {
+      title: "3 Bedroom Maisonette",
       category: "Residential",
-      location: "Riverside Estates",
-      date: "2024",
-      image: "https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description: "High-end kitchen renovation with custom cabinetry and premium appliances."
+      location: "Utange Mombasa Kenya",
+      date: "",
+      image: "/images/utange3b-1.jpeg",
+      description: ""
+    },
+      {
+      title: "3 Bedroom Maisonette",
+      category: "Residential",
+      location: "Utange Mombasa Kenya",
+      date: "",
+      image: "/images/utange3b-3.jpeg",
+      description: ""
+    },
+    //Bamburi  Mombasa
+    {
+      title: "3 Bedroom Appartment",
+      category: "Residential",
+      location: " Bamburi Mombasa Kenya Area 1000m²",
+      date: "",
+      image: "/images/bamburi3b-0.jpeg",
+      description: ""
     },
     {
-      title: "Retail Shopping Center",
-      category: "Commercial",
-      location: "Westside Plaza",
-      date: "2022",
-      image: "https://images.pexels.com/photos/280221/pexels-photo-280221.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description: "Multi-tenant retail space with modern storefronts and ample parking facilities."
+      title: "3 Bedroom Appartment",
+      category: "Residential",
+      location: " Bamburi Mombasa Kenya Area 1000m²",
+      date: "",
+      image: "/images/bamburi3b-1.jpeg",
+      description: ""
     },
     {
-      title: "Master Suite Addition",
-      category: "Addition",
-      location: "Maple Grove",
-      date: "2024",
-      image: "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description: "Spacious master bedroom and bathroom addition with walk-in closet and private balcony."
+      title: "3 Bedroom Appartment",
+      category: "Residential",
+      location: " Bamburi Mombasa Kenya Area 1000m²",
+      date: "",
+      image: "/images/bamburi3b-2.jpeg",
+      description: ""
+    },
+//4BedRoom 
+    {
+      title: "4 Bedroom Maisonette",
+      category: "Residential",
+      date: "",
+      image: "/images/4bm-0.jpg",
+      description: ""
+    },
+    {
+      title: "4 Bedroom Maisonette",
+      category: "Residential",
+      date: "",
+      image: "/images/4bm-3.jpeg",
+      description: ""
+    },
+    {
+      title: "4 Bedroom Maisonette",
+      category: "Residential",
+      date: "",
+      image: "/images/4bm-6.jpeg",
+      description: ""
     }
+ 
   ];
 
   return (
@@ -58,7 +82,7 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Featured Projects
+            Our Projects
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Take a look at some of our recent construction projects that showcase 
@@ -114,11 +138,11 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <button className="bg-amber-800 hover:bg-amber-900 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
             View All Projects
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

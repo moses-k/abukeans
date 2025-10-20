@@ -1,36 +1,37 @@
 import React from 'react';
-import { Linkedin, Mail, Award } from 'lucide-react';
+import { Linkedin, Mail, Award, User } from 'lucide-react';
+import { COLORS } from '../constants/colors';
 
 const Team = () => {
   const teamMembers = [
     {
-      name: 'Sarah Johnson',
+      name: 'Lammeck Mogire ',
       role: 'Managing Director',
       image: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Strategic leader with 20+ years in business transformation and organizational development.',
+      bio: 'Bachelor of Science in Civil Engineering (The Technical University of Kenya)',
       expertise: ['Strategic Planning', 'Leadership Development', 'Change Management']
     },
     {
-      name: 'Michael Chen',
+      name: 'Vincent Nyagaka',
       role: 'Senior Consultant',
       image: 'https://images.pexels.com/photos/3760790/pexels-photo-3760790.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Technology expert specializing in digital transformation and process optimization.',
+      bio: 'Bachelor of Science in Civil Engineering The Technical University of Kenya)',
       expertise: ['Digital Strategy', 'Process Optimization', 'Technology Integration']
     },
     {
-      name: 'Emily Rodriguez',
+      name: 'Kelvin Ondara',
       role: 'Principal Analyst',
       image: 'https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Data analytics specialist with expertise in performance measurement and business intelligence.',
+      bio: 'Bachelor of Science in Civil Engineering The Technical University of Kenya)',
       expertise: ['Data Analytics', 'Performance Management', 'Business Intelligence']
     },
-    {
-      name: 'David Thompson',
-      role: 'Operations Director',
-      image: 'https://images.pexels.com/photos/3760778/pexels-photo-3760778.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Operations expert focused on efficiency improvement and quality management systems.',
-      expertise: ['Operations Management', 'Quality Systems', 'Lean Six Sigma']
-    }
+    // {
+    //   name: 'David Thompson',
+    //   role: 'Operations Director',
+    //   image: 'https://images.pexels.com/photos/3760778/pexels-photo-3760778.jpeg?auto=compress&cs=tinysrgb&w=400',
+    //   bio: 'Operations expert focused on efficiency improvement and quality management systems.',
+    //   expertise: ['Operations Management', 'Quality Systems', 'Lean Six Sigma']
+    // }
   ];
 
   return (
@@ -46,29 +47,27 @@ const Team = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {teamMembers.map((member, index) => (
             <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div className="relative mb-6">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-48 object-cover rounded-xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
+            
+              {/* Default Avatar */}
+              <div className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                <User className="w-10 h-10 text-gray-500" />
               </div>
               
               <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-              <p className="text-blue-600 font-semibold mb-3">{member.role}</p>
+              <p  style={{ color: COLORS.secondary }}
+                className="text-blue-600 font-semibold mb-3">{member.role}</p>
               <p className="text-gray-600 text-sm mb-4 leading-relaxed">{member.bio}</p>
               
-              <div className="space-y-2 mb-4">
+              <div style={{ color: COLORS.secondary }} className="space-y-2 mb-4">
                 {member.expertise.map((skill, skillIndex) => (
-                  <span key={skillIndex} className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">
+                  <span key={skillIndex} style={{ color: COLORS.primary }}  className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">
                     {skill}
                   </span>
                 ))}
               </div>
               
-              <div className="flex space-x-3">
-                <button className="p-2 bg-gray-100 rounded-lg hover:bg-blue-100 transition-colors duration-200 group">
+              <div style={{ color: COLORS.primary }} className="flex space-x-3">
+                <button style={{ color: COLORS.secondary }} className="p-2 bg-gray-100 rounded-lg hover:bg-blue-100 transition-colors duration-200 group">
                   <Linkedin className="h-4 w-4 text-gray-600 group-hover:text-blue-600" />
                 </button>
                 <button className="p-2 bg-gray-100 rounded-lg hover:bg-blue-100 transition-colors duration-200 group">
