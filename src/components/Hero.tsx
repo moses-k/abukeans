@@ -1,18 +1,22 @@
 import React from 'react';
 import { ArrowRight, Shield, Award, Clock } from 'lucide-react';
+import { COLORS } from '../constants/colors';
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="relative bg-gradient-to-br from-amber-900 to-amber-950 text-white overflow-hidden"
+     // className="relative bg-gradient-to-br from-amber-900 to-amber-950 text-white overflow-hidden"
+       className="relative text-white overflow-hidden"
+      style={{ backgroundColor: COLORS.primary }}
+
     >
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{
           backgroundImage:
-            "url('https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+            "url('/images/construction-consultants.jpg')",
         }}
       ></div>
 
@@ -24,18 +28,17 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl text-amber-100 mb-8 leading-relaxed">
-              Professional construction services with over 25 years of experience. From
-              residential remodeling to commercial construction, we deliver quality
-              craftsmanship on time and within budget.
+            Building excellence in construction and design across Kenya with innovation, quality, and integrity.
+
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button className="bg-amber-700 hover:bg-amber-800 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center transition-colors">
+              <button style={{ backgroundColor: COLORS.secondary, color: COLORS.onsecondary }}  className="bg-amber-300 hover:bg-amber-200 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center transition-colors">
                 Get Free Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
 
-              <button className="border-2 border-white text-white hover:bg-white hover:text-amber-900 px-8 py-4 rounded-lg font-semibold transition-colors">
+              <button  style={{ backgroundColor: COLORS.primary, color: COLORS.onPrimary }} className="px-8 py-4 rounded-lg font-semibold transition-colors hover:opacity-90">
                 View Our Work
               </button>
             </div>
@@ -71,11 +74,11 @@ const Hero = () => {
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
               <img
-                src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/images/construction-consultants.jpg"
                 alt="Construction work"
                 className="w-full rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-amber-700 text-white p-6 rounded-2xl shadow-xl">
+              <div style={{ backgroundColor: COLORS.primary, color: COLORS.onPrimary }}  className="absolute -bottom-6 -left-6 bg-amber-700 text-white p-6 rounded-2xl shadow-xl">
                 <div className="text-3xl font-bold">25+</div>
                 <div className="text-amber-100">Years Experience</div>
               </div>

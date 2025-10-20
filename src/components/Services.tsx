@@ -1,70 +1,108 @@
 import React from 'react';
-import { Home, Building2, Wrench, Paintbrush, Hammer, Shield } from 'lucide-react';
+import { Building2, Palette, Leaf, Hammer, Shield, ChevronRight } from 'lucide-react';
 
-const Services = () => {
-  const services = [
-    {
-      icon: <Home className="h-12 w-12 text-orange-600" />,
-      title: "Residential Construction",
-      description: "Custom homes, additions, and major renovations built to your exact specifications."
-    },
-    {
-      icon: <Building2 className="h-12 w-12 text-orange-600" />,
-      title: "Commercial Projects",
-      description: "Office buildings, retail spaces, and industrial facilities with professional quality."
-    },
-    {
-      icon: <Wrench className="h-12 w-12 text-orange-600" />,
-      title: "Remodeling",
-      description: "Kitchen, bathroom, and whole house remodeling to transform your living space."
-    },
-    {
-      icon: <Paintbrush className="h-12 w-12 text-orange-600" />,
-      title: "Finishing Work",
-      description: "Professional painting, flooring, and detailed finishing touches for perfect results."
-    },
-    {
-      icon: <Hammer className="h-12 w-12 text-orange-600" />,
-      title: "Repairs & Maintenance",
-      description: "Quick repairs and ongoing maintenance to keep your property in top condition."
-    },
-    {
-      icon: <Shield className="h-12 w-12 text-orange-600" />,
-      title: "Emergency Services",
-      description: "24/7 emergency repair services for storm damage and urgent construction needs."
-    }
-  ];
+const servicesData = [
+  {
+    icon: <Building2 className="h-6 w-6 text-[#F4D67F]" />,
+    title: "Commercial Premises & Residential Apartments",
+    description: "We specialise in quality construction for both living and working spaces.",
+    points: [
+      "Construction of residential flats and apartments.",
+      "Office building and commercial complexes.",
+      "Renovation and remodelling of existing buildings.",
+      "Structural design and planning."
+    ]
+  },
+  {
+    icon: <Shield className="h-6 w-6 text-[#F4D67F]" />,
+    title: "Boundary Wall Construction",
+    description: "Protect and enhance your property with our durable boundary walls.",
+    points: [
+      "Boundary wall construction for homes, schools and business.",
+      "Demolition and reconstruction of boundary walls.",
+      "Strong, secure, neat finishes with aesthetic appeal.",
+      "Ideal for schools, homes and commercial properties."
+    ]
+  },
+  {
+    icon: <Hammer className="h-6 w-6 text-[#F4D67F]" />,
+    title: "Fabrication & Installations",
+    description: "We design, fabricate, and install structures with approved interior and exterior finishes.",
+    points: [
+      "Custom design, fabrication and installation services.",
+      "High quality finishes tailored to your quality needs.",
+      "Welding and professional installations."
+    ]
+  },
+  {
+    icon: <Leaf className="h-6 w-6 text-[#F4D67F]" />,
+    title: "Schools & Institutions",
+    description: "Building secure and durable spaces for educational facilities.",
+    points: [
+      "Junior Secondary and Primary School classrooms construction.",
+      "Renovation and expansions.",
+      "Boundary wall construction for schools and public institutions.",
+      "We ensure security, durability, and compliance with all safety standards."
+    ]
+  },
+  {
+    icon: <Palette className="h-6 w-6 text-[#F4D67F]" />,
+    title: "Glazing & Aluminium Works",
+    description: "Advanced aluminium and glazing solutions ideal for offices, malls, and homes.",
+    points: [
+      "Sliding windows and doors.",
+      "Curtain walls and glass partitioning.",
+      "Weatherproof, energy-efficient designs.",
+      "Skylights and shower enclosures."
+    ]
+  },
+  {
+    icon: <Building2 className="h-6 w-6 text-[#F4D67F]" />,
+    title: "Civil Engineering & Road Construction",
+    description: "Reliable and expert in road work services in Kenya, for both private and public projects.",
+    points: [
+      "Road grading, paving and surfacing.",
+      "Drainage system design and installation.",
+      "Sidewalks, parking lots and access roads.",
+      "Construction of culverts and bridges."
+    ]
+  }
+];
 
-  return (
-    <section id="services" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We provide comprehensive construction services for residential and commercial projects. 
-            Quality craftsmanship and attention to detail in every job.
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow group">
-              <div className="mb-6 group-hover:scale-110 transition-transform">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{service.description}</p>
-              <div className="mt-6">
-                <button className="text-orange-600 font-semibold hover:text-orange-700 transition-colors">
-                  Learn More →
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+const Services = () => (
+  <section id="services" className="py-20 bg-gray-50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Section Title */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Our Building Construction Services</h2>
+        <p className="text-gray-700 max-w-2xl mx-auto">We deliver top-notch construction solutions for residential, commercial, and institutional projects in Kenya.</p>
       </div>
-    </section>
-  );
-};
+
+      {/* Services Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {servicesData.map((service, index) => (
+          <div
+            key={index}
+            className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-t-4 border-[#F4D67F] group"
+          >
+            <div className="flex items-center mb-4 space-x-3">
+              {service.icon}
+              <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+            </div>
+            <p className="text-gray-600 mb-4">{service.description}</p>
+            <ul className="space-y-2">
+              {service.points.map((point, i) => (
+                <li key={i} className="flex items-start group-hover:text-[#F4D67F] transition-colors duration-300">
+                  <ChevronRight className="h-4 w-4 mt-1 mr-2" />
+                  <span className="text-gray-700 text-sm">{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 export default Services;

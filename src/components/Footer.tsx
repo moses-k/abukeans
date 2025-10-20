@@ -9,27 +9,24 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="text-2xl font-bold mb-4">
-              DanCom <span className="text-orange-400">Construction</span>
+              <span className="text-orange-400">Abukeans Investment</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Building excellence for over 25 years. Your trusted partner for all construction needs.
+              Building excellence in construction and design across Kenya with innovation, quality, and integrity.
             </p>
-            <div className="flex space-x-4">
-              <Facebook className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Instagram className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Linkedin className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-            </div>
+            
           </div>
           
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Residential Construction</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Commercial Projects</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Remodeling</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Repairs & Maintenance</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Emergency Services</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Structural & Architectural Design</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Interior Design</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Landscaping</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Fabrication & Installation</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Commercial & Residential</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Boundary Wall Construction</a></li>
             </ul>
           </div>
           
@@ -41,6 +38,7 @@ const Footer = () => {
               <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
               <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
               <li><a href="#projects" className="hover:text-white transition-colors">Projects</a></li>
+              <li><a href="#projects" className="hover:text-white transition-colors">Solution</a></li>
               <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
@@ -51,11 +49,12 @@ const Footer = () => {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center">
                 <Phone className="h-5 w-5 mr-2" />
-                <span>(555) 123-4567</span>
+                <span> 0108300000</span>
+            
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 mr-2" />
-                <span>info@abukeansinvestment.com</span>
+                <span>info@abukeansinvestment.co.ke</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 mt-1" />
@@ -66,7 +65,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 DanCom Construction. All rights reserved. Licensed & Insured.</p>
+          <p>&copy; 2025 Abukeans Investment. All rights reserved. Licensed & Insured.</p>
         </div>
       </div>
     </footer>

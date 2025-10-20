@@ -4,24 +4,24 @@ import { Linkedin, Mail, Award } from 'lucide-react';
 const Team = () => {
   const teamMembers = [
     {
-      name: 'Sarah Johnson',
+      name: 'Lammeck Mogire ',
       role: 'Managing Director',
       image: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Strategic leader with 20+ years in business transformation and organizational development.',
+      bio: 'Bachelor of Science in Civil Engineering (The Technical University of Kenya)',
       expertise: ['Strategic Planning', 'Leadership Development', 'Change Management']
     },
     {
-      name: 'Michael Chen',
+      name: 'Vincent Nyagaka',
       role: 'Senior Consultant',
       image: 'https://images.pexels.com/photos/3760790/pexels-photo-3760790.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Technology expert specializing in digital transformation and process optimization.',
+      bio: 'Bachelor of Science in Civil Engineering The Technical University of Kenya)',
       expertise: ['Digital Strategy', 'Process Optimization', 'Technology Integration']
     },
     {
-      name: 'Emily Rodriguez',
+      name: 'Kelvin Ondara',
       role: 'Principal Analyst',
       image: 'https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Data analytics specialist with expertise in performance measurement and business intelligence.',
+      bio: 'Bachelor of Science in Civil Engineering The Technical University of Kenya)',
       expertise: ['Data Analytics', 'Performance Management', 'Business Intelligence']
     },
     {
@@ -39,7 +39,7 @@ const Team = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Expert Team</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Meet the experienced professionals who drive our success and deliver exceptional results for our clients.
+            Meet the minds behind your liable building and construction partner 
           </p>
         </div>
 
