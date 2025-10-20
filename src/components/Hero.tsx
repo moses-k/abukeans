@@ -2,7 +2,17 @@ import React from 'react';
 import { ArrowRight, Shield, Award, Clock } from 'lucide-react';
 import { COLORS } from '../constants/colors';
 
+const handleScroll = () => {
+  const contactSection = document.getElementById('contact');
+  contactSection?.scrollIntoView({ behavior: 'smooth' });
+};
+const handleScroll2 = () => {
+  const contactSection = document.getElementById('projects');
+  contactSection?.scrollIntoView({ behavior: 'smooth' });
+};
 const Hero = () => {
+
+  
   return (
     <section
       id="home"
@@ -33,12 +43,18 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button style={{ backgroundColor: COLORS.secondary, color: COLORS.onsecondary }}  className="bg-amber-300 hover:bg-amber-200 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center transition-colors">
+              <button  
+               onClick={handleScroll}
+              style={{ backgroundColor: COLORS.secondary, color: COLORS.onsecondary }} 
+              className="bg-amber-300 hover:bg-amber-200 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center transition-colors">
                 Get Free Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
 
-              <button  style={{ backgroundColor: COLORS.primary, color: COLORS.onPrimary }} className="px-8 py-4 rounded-lg font-semibold transition-colors hover:opacity-90">
+              <button 
+                onClick={handleScroll2}
+                style={{ backgroundColor: COLORS.primary, color: COLORS.onPrimary }} 
+                className="px-8 py-4 rounded-lg font-semibold transition-colors hover:opacity-90">
                 View Our Work
               </button>
             </div>

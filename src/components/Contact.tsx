@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import { COLORS } from '../constants/colors';
+import emailjs from 'emailjs-com';
 
+//service_0xbbufr
+//template_4fkl41k
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -10,6 +13,8 @@ const Contact = () => {
     service: '',
     message: ''
   });
+
+  const [status, setStatus] = useState({ type: '', message: '' });
 
   const handleInputChange = (e) => {
     setFormData({
@@ -20,8 +25,30 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // add API or email handler here
+    setStatus({ type: 'loading', message: 'Sending your message...' });
+
+    // send email via EmailJS
+    emailjs.send(
+      'service_0xbbufr', // replace with your EmailJS service ID
+      'template_4fkl41k', // replace with your EmailJS template ID
+      formData,
+      'M1fZfh1JxpZ0oU5eN' // replace with your EmailJS public key
+    )
+    .then(() => {
+      setStatus({ type: 'success', message: 'Message sent successfully!' });
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    })
+    
+    .catch((error) => {
+      console.error('Error sending email:', error);
+      setStatus({ type: 'error', message: 'Failed to send message. Try again later.' });
+    });
   };
 
   return (
@@ -78,7 +105,7 @@ const Contact = () => {
                 {
                   icon: <MapPin className="h-6 w-6" style={{ color: COLORS.secondary }} />,
                   title: 'Location',
-                  lines: ['Kenya']
+                  lines: ['Nairobi, Kenya']
                 },
                 {
                   icon: <Clock className="h-6 w-6" style={{ color: COLORS.secondary }} />,
