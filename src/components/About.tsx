@@ -4,17 +4,17 @@ import { COLORS } from '../constants/colors';
 
 const About = () => (
   <section
-    id="about"
-    style={{ backgroundColor: COLORS.primary, color: COLORS.onPrimary }}
-    className="py-20 bg-gradient-to-b from-white via-gray-50 to-white text-gray-800"
+   
+  id="about"
+  className="py-20 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300"
   >
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Title */}
       <div className="text-center mb-16">
-        <h2  style={{ color: COLORS.primary }} className="text-4xl font-extrabold text-gray-900 mb-4">
-          About <span  style={{ color: COLORS.secondary }} className="text-[#F4D67F]">Us</span>
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-300 mb-8 text-center">
+          About <span className="text-[#F4D67F]">Us</span>
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           We’re more than builders — we’re creators of enduring spaces that
           reflect innovation, trust, and excellence.
         </p>
@@ -22,9 +22,9 @@ const About = () => (
 
       {/* Intro */}
       <div className="mb-20">
-        <div  style={{ color: COLORS.primary }} className="bg-white shadow-md rounded-2xl p-8 border-t-4 border-[#F4D67F]">
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            <span className="font-semibold text-gray-900">
+        <div className="bg-white dark:bg-gray-800 shadow-md rounded-2xl p-8 border-t-4 border-[#F4D67F] transition-colors duration-300">
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+            <span className="font-semibold text-gray-900 dark:text-gray-300">
               Abukeans Investment Limited
             </span>{' '}
             is a dynamic design-and-build company dedicated to turning visionary
@@ -33,7 +33,7 @@ const About = () => (
             clients' aspirations into well-engineered, functional, and
             aesthetically refined spaces.
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             Our commitment to quality craftsmanship and sustainable construction
             practices ensures that every project contributes to transforming
             Kenya's built environment and redefining its architectural
@@ -56,19 +56,21 @@ const About = () => (
         ].map((item, i) => (
           <div
             key={i}
-            className="bg-white shadow-lg rounded-2xl p-8 border-t-4 border-[#F4D67F] hover:shadow-2xl transition duration-300"
+            className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-8 border-t-4 border-[#F4D67F] hover:shadow-2xl transition duration-300"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-300 mb-4">
               {item.title}
             </h3>
-            <p className="text-gray-700 leading-relaxed">{item.text}</p>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item.text}</p>
           </div>
         ))}
       </div>
 
       {/* Core Values */}
-      <div className="mb-20">
-        <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+      
+      <div
+      className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-8 border-t-4 border-[#F4D67F] hover:shadow-2xl transition duration-300">
+        <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-300 mb-8 text-center">
           Our <span className="text-[#F4D67F]">Core Values</span>
         </h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -84,10 +86,10 @@ const About = () => (
           ].map((value, i) => (
             <div
               key={i}
-              className="flex items-start gap-3 p-4 bg-gray-100 hover:bg-[#F4D67F]/10 rounded-xl border border-gray-200 transition"
+              className="flex items-start gap-3 p-4 bg-gray-100 dark:bg-gray-800  hover:bg-[#F4D67F]/10 dark:hover:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-700  transition"
             >
               <ChevronRight className="h-5 w-5 text-[#F4D67F] mt-1 flex-shrink-0" />
-              <p className="text-gray-700">{value}</p>
+              <p className="text-gray-700 dark:text-gray-300">{value}</p>
             </div>
           ))}
         </div>
@@ -95,10 +97,10 @@ const About = () => (
 
       {/* Achievements */}
       <div>
-        <h3 className="text-3xl font-bold text-gray-900 mb-10 text-center">
+        <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-300 mb-10 text-center">
           Our <span className="text-[#F4D67F]">Achievements</span>
         </h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
           {[
             {
               title: 'Successful Project Delivery',
@@ -127,12 +129,12 @@ const About = () => (
           ].map((achievement, i) => (
             <div
               key={i}
-              className="p-6 bg-white shadow-md rounded-2xl border-t-4 border-[#F4D67F] hover:shadow-xl transition"
+              className="p-6 bg-white dark:bg-gray-800 shadow-md rounded-2xl border-t-4 border-[#F4D67F] hover:shadow-xl dark:hover:bg-gray-700 transition-colors duration-300"
             >
-              <h4 className="font-bold text-gray-900 mb-2">
+              <h4 className="font-bold text-gray-900 dark:text-gray-300 mb-2">
                 {achievement.title}
               </h4>
-              <p className="text-gray-700 text-sm leading-relaxed">
+              <p className="text-gray-700 text-sm dark:text-gray-300 leading-relaxed">
                 {achievement.desc}
               </p>
             </div>
