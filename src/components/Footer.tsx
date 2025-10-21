@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="text-2xl font-bold mb-4">
-              <span className="text-orange-400">Abukeans Investment</span>
+              <span className="font-semibold mb-4">Abukeans Investment</span>
             </div>
             <p className="text-gray-400 mb-4">
               Building excellence in construction and design across Kenya with innovation, quality, and integrity.

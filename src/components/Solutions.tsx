@@ -43,13 +43,13 @@ const Solutions = () => {
   ];
 
   return (
-    <section id="solutions" className="py-20 bg-gray-50">
+    <section id="solutions" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-[#F4D67F] mb-4 transition-colors duration-300">
             Our Solutions
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Take a look at some of our recent construction solution that showcase 
             our commitment to quality craftsmanship and attention to detail.
           </p>
@@ -59,7 +59,7 @@ const Solutions = () => {
           {solutions.map((solution, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group"
+              className="bg-white rounded-xl dark:bg-gray-800 shadow-lg overflow-hidden hover:shadow-xl dark:hover:bg-gray-700 transition-shadow duration-300 group"
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -68,12 +68,12 @@ const Solutions = () => {
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-amber-800 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-amber-800 dark:bg-amber-700 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     {solution.category}
                   </span>
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <button className="bg-white text-amber-800 px-4 py-2 rounded-lg font-semibold flex items-center space-x-2 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                  <button className="bg-white dark:bg-gray-800 text-amber-800 dark:text-gray-100 px-4 py-2 rounded-lg font-semibold flex items-center space-x-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                     <span>View Details</span>
                     <ExternalLink className="h-4 w-4" />
                   </button>
@@ -81,10 +81,10 @@ const Solutions = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-[#F4D67F] mb-4 transition-colors duration-300 mb-3">
                   {solution.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                   {solution.description}
                 </p>
                 
