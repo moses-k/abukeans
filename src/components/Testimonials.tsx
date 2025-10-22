@@ -4,21 +4,21 @@ import { Star, Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Gikinji",
+      name: "Sarah Wahome",
       role: "Homeowner",
-      content: "DanCom Construction exceeded our expectations in every way. Their attention to detail and professionalism made our dream home renovation a reality. Highly recommended!",
+      content: "Abukeans Construction exceeded our expectations in every way. Their attention to detail and professionalism made our dream home renovation a reality. Highly recommended!",
       rating: 5
     },
     {
       name: "Mike Mogambi",
       role: "Business Owner",
-      content: "We hired DanCom for our office renovation, and they delivered exceptional results on time and within budget. Their team was professional and minimized disruption to our business.",
+      content: "We hired Abukeans for our office renovation, and they delivered exceptional results on time and within budget. Their team was professional and minimized disruption to our business.",
       rating: 5
     },
     {
       name: "Jennifer Mwangi",
       role: "Property Manager",
-      content: "I've worked with many contractors over the years, but DanCom stands out for their reliability and quality work. They're my go-to choice for all construction needs.",
+      content: "I've worked with many contractors over the years, but Abukeans stands out for their reliability and quality work. They're my go-to choice for all construction needs.",
       rating: 5
     }
   ];

@@ -8,7 +8,7 @@ const Projects = () => {
       category: "Residential",
       location: "Utange Mombasa Kenya",
       date: "",
-      image: "/images/utange3b-0.jpeg",
+      image: "/images/utange3b-5.jpeg",
       description: ""
     },
       {
@@ -57,7 +57,7 @@ const Projects = () => {
       title: "4 Bedroom Maisonette",
       category: "Residential",
       date: "",
-      image: "/images/4bm-0.jpg",
+      image: "/images/4bm-1.jpeg",
       description: ""
     },
     {
