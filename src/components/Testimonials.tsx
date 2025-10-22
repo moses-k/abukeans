@@ -4,19 +4,19 @@ import { Star, Quote } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Sarah Gikinji",
       role: "Homeowner",
       content: "DanCom Construction exceeded our expectations in every way. Their attention to detail and professionalism made our dream home renovation a reality. Highly recommended!",
       rating: 5
     },
     {
-      name: "Mike Peterson",
+      name: "Mike Mogambi",
       role: "Business Owner",
       content: "We hired DanCom for our office renovation, and they delivered exceptional results on time and within budget. Their team was professional and minimized disruption to our business.",
       rating: 5
     },
     {
-      name: "Jennifer Davis",
+      name: "Jennifer Mwangi",
       role: "Property Manager",
       content: "I've worked with many contractors over the years, but DanCom stands out for their reliability and quality work. They're my go-to choice for all construction needs.",
       rating: 5
@@ -24,25 +24,26 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-blue-900 text-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-blue-900 text-white dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <div className="container mx-auto px-4 ">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">What Our Clients Say</h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied clients have to say about their experience with DanCom Construction.
+              <h2 className="text-4xl font-bold mb-4 text-white dark:text-[#F4D67F]">
+                What Our Clients Say</h2>
+          <p className="text-xl text-blue-100 dark:text-gray-300 max-w-3xl mx-auto">
+             Don't just take our word for it. Here's what our satisfied clients have to say about their experience with DanCom Construction.
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white text-gray-900 p-8 rounded-lg shadow-xl">
-              <Quote className="h-10 w-10 text-orange-600 mb-6" />
+            <div key={index} className="bg-white text-gray-900 dark:text-gray-300 dark:bg-gray-800 p-8 rounded-lg shadow-xl">
+              <Quote className="h-10 w-10 text-orange-600 mb-6 dark:bg-gray-800" />
               <p className="text-lg mb-6 leading-relaxed">{testimonial.content}</p>
               
               <div className="flex items-center justify-between">
                 <div>
                   <div className="font-semibold text-lg">{testimonial.name}</div>
-                  <div className="text-gray-600">{testimonial.role}</div>
+                  <div className="text-gray-600 dark:text-gray-300">{testimonial.role}</div>
                 </div>
                 <div className="flex">
                   {[...Array(testimonial.rating)].map((_, i) => (
