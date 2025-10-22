@@ -73,10 +73,7 @@ const Solutions = () => {
                   </span>
                 </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <button className="bg-white dark:bg-gray-800 text-amber-800 dark:text-gray-100 px-4 py-2 rounded-lg font-semibold flex items-center space-x-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                    <span>View Details</span>
-                    <ExternalLink className="h-4 w-4" />
-                  </button>
+                  
                 </div>
               </div>
               

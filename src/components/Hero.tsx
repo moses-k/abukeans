@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Building Your <span className="text-orange-400">Dreams</span> Into Reality
+              Building Your <span className="text-yellow-700">Dreams</span> Into Reality
             </h1>
 
             <p className="text-xl text-amber-100 mb-8 leading-relaxed">
