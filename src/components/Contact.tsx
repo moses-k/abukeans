@@ -69,7 +69,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-     <h2 className="text-4xl font-bold mb-4 tracking-tight text-amber-800 dark:text-[#F4D67F]">
+     <h2 className="text-4xl font-bold mb-4 tracking-tight text-yellow-500 dark:text-[#F4D67F]">
             Get In Touch
           </h2>
       

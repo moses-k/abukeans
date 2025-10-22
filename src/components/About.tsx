@@ -23,7 +23,7 @@ const About = () => (
       {/* Intro */}
       <div className="mb-20">
         <div className="bg-white dark:bg-gray-800 shadow-md rounded-2xl p-8 border-t-4 border-[#F4D67F] transition-colors duration-300">
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+          <p className="text-lg text-yellow-700 dark:text-gray-300 leading-relaxed mb-6">
             <span className="font-semibold text-gray-900 dark:text-gray-300">
               Abukeans Investment Limited
             </span>{' '}
@@ -33,7 +33,7 @@ const About = () => (
             clients' aspirations into well-engineered, functional, and
             aesthetically refined spaces.
           </p>
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          <p className="text-lg text-yellow-700 dark:text-gray-300 leading-relaxed">
             Our commitment to quality craftsmanship and sustainable construction
             practices ensures that every project contributes to transforming
             Kenya's built environment and redefining its architectural
@@ -61,7 +61,7 @@ const About = () => (
             <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-300 mb-4">
               {item.title}
             </h3>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item.text}</p>
+            <p className="text-yellow-700 dark:text-gray-300 leading-relaxed">{item.text}</p>
           </div>
         ))}
       </div>
