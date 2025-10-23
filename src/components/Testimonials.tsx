@@ -30,7 +30,7 @@ const Testimonials = () => {
               <h2 className="text-4xl font-bold mb-4 text-black dark:text-[#F4D67F]">
                 What Our Clients Say</h2>
           <p className="text-xl text-yellow-600 dark:text-gray-300 max-w-3xl mx-auto">
-             Don't just take our word for it. Here's what our satisfied clients have to say about their experience with DanCom Construction.
+             Don't just take our word for it. Here's what our satisfied clients have to say about their experience with Abukeans Construction.
           </p>
         </div>
         
