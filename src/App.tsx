@@ -15,10 +15,7 @@ function App() {
   return (
     <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 min-h-screen transition-colors duration-300">
       
-      {/* ✅ This header only holds the toggle */}
-      <header className="flex justify-end items-center p-4">
-        <ThemeToggle />
-      </header>
+    
 
       {/* ✅ These are your main page sections */}
       <Header />
