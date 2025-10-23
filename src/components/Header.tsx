@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { COLORS } from '../constants/colors';
+import { Moon, Sun } from 'lucide-react'; // optional icons
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem('theme') === 'dark'
+  );
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (darkMode) {
+      root.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      root.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [darkMode]);
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50">
       {/* Top bar */}
      <div style={{ backgroundColor: COLORS.primary }} className="text-white py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,12 +56,23 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-700 hover:text-amber-800 font-medium transition-colors">Home</a>
-            <a href="#about" className="text-gray-700 hover:text-amber-800 font-medium transition-colors">About Us</a>
-            <a href="#services" className="text-gray-700 hover:text-amber-800 font-medium transition-colors">Services</a>
-            <a href="#projects" className="text-gray-700 hover:text-amber-800 font-medium transition-colors">Projects</a>
-            <a href="#solutions" className="text-gray-700 hover:text-amber-800 font-medium transition-colors">Solutions</a>
-            <a href="#contact" className="text-gray-700 hover:text-amber-800 font-medium transition-colors">Contact</a>
+            <a href="#home" className="text-gray-700 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-800 font-medium transition-colors">Home</a>
+            <a href="#about" className="text-gray-700 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-800 font-medium transition-colors">About Us</a>
+            <a href="#services" className="text-gray-700 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-800 font-medium transition-colors">Services</a>
+            <a href="#projects" className="text-gray-700 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-800 font-medium transition-colors">Projects</a>
+            <a href="#solutions" className="text-gray-700 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-800 font-medium transition-colors">Solutions</a>
+            <a href="#contact" className="text-gray-700 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-800 font-medium transition-colors">Contact</a>
+             <button
+                  onClick={() => setDarkMode(!darkMode)}
+                  
+                  aria-label="Toggle dark mode"
+                >
+                  {darkMode ? (
+                    <Sun className="w-5 h-5 text-yellow-400" />
+                  ) : (
+                    <Moon className="w-5 h-5 text-gray-800" />
+                  )}
+                </button>
           </nav>
 
           {/* Mobile menu button */}
@@ -64,12 +90,24 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
-              <a href="#home" className="text-gray-700 hover:text-amber-800 font-medium">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-amber-800 font-medium">About Us</a>
-              <a href="#services" className="text-gray-700 hover:text-amber-800 font-medium">Services</a>
-              <a href="#projects" className="text-gray-700 hover:text-amber-800 font-medium">Projects</a>
-              <a href="#solutions" className="text-gray-700 hover:text-amber-800 font-medium">Solutions</a>
-              <a href="#contact" className="text-gray-700 hover:text-amber-800 font-medium">Contact</a>
+              <a href="#home" className="text-gray-700 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-800 font-medium">Home</a>
+              <a href="#about" className="text-gray-700 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-800 font-medium">About Us</a>
+              <a href="#services" className="text-gray-700 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-800 font-medium">Services</a>
+              <a href="#projects" className="text-gray-700 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-800 font-medium">Projects</a>
+              <a href="#solutions" className="text-gray-700 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-800 font-medium">Solutions</a>
+              <a href="#contact" className="text-gray-700 dark:text-gray-300 hover:text-amber-800 dark:hover:text-amber-800 font-medium">Contact</a>
+
+                   {/* Dark/Light Mode Icon in Mobile Menu */}
+                    <button
+                         onClick={() => setDarkMode(!darkMode)}
+                         aria-label="Toggle dark mode"
+                       >
+                         {darkMode ? (
+                           <Sun className="w-5 h-5 text-yellow-400" />
+                         ) : (
+                           <Moon className="w-5 h-5 text-gray-800" />
+                         )}
+                       </button>
             </nav>
           </div>
         )}
